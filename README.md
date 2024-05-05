@@ -3,6 +3,7 @@ Final-Project-Compression---ecs19a
 Description: This is the project folder to test Huffman and LZW encoding along with Tar archiving and decompression
 
 TOC:
+
   -main folder:
     - SchubsArc.java
     - SchubsH.java
