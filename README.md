@@ -19,4 +19,4 @@ TOC:
 
 -other folders for the test files
 
-Instructions on use for each file is given in the header of each file
+Instructions and Explanations on use for each file is given at the top of each file
