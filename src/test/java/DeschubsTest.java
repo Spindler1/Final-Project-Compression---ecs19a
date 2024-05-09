@@ -55,13 +55,13 @@ public class DeschubsTest {
         System.out.println("Test: decompressHuffman");
         // check if DeschubsH can decompress a file
         String archiveName = "src/DeschubsTests/DeschubsH.txt.hh";
-        File file = new File("src/DeschubsTests/DeschubsH.txt");
-        Path filePath = Paths.get("src/DeschubsTests/DeschubsH.txt");
+        File file = new File("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsH.txt");
+        Path filePath = Paths.get("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsH.txt");
 
         Deschubs.main(new String[] { archiveName });
         assertTrue(file.exists());
 
-        String originalFile = "src/DeschubsTests/DeschubsHCopy.txt";
+        String originalFile = "src" + File.separator + "DeschubsTests" + File.separator + "DeschubsHCopy.txt";
         Path originalPath = Paths.get(originalFile);
         assertEquals(Files.readString(originalPath), Files.readString(filePath));
 
@@ -120,19 +120,19 @@ public class DeschubsTest {
         // check if DeschubsArc can decompress a file
         // String filename = "src/DeschubsTests/DeschubsTars.txt";
         // File file = new File(filename);
-        String archiveName = "src/DeschubsTests/DeschubsTests.zh";
-        File file = new File("src/DeschubsTests/DeschubsTars.txt");
-        File file2 = new File("src/DeschubsTests/DeschubsTars1.txt");
-        Path filePath = Paths.get("src/DeschubsTests/DeschubsTars.txt");
-        Path filePath2 = Paths.get("src/DeschubsTests/DeschubsTars1.txt");
+        String archiveName = "src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTests.zh";
+        File file = new File("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTars.txt");
+        File file2 = new File("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTars1.txt");
+        Path filePath = Paths.get("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTars.txt");
+        Path filePath2 = Paths.get("src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTars1.txt");
 
         Deschubs.main(new String[] { archiveName });
         assertTrue(file2.exists());
         assertTrue(file.exists());
 
-        String originalFile = "src/DeschubsTests/DeschubsTars1Copy.txt";
+        String originalFile = "src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTars1Copy.txt";
         Path originalPath = Paths.get(originalFile);
-        String originalFile2 = "src/DeschubsTests/DeschubsTarsCopy.txt";
+        String originalFile2 = "src" + File.separator + "DeschubsTests" + File.separator + "DeschubsTarsCopy.txt";
         Path originalPath2 = Paths.get(originalFile2);
         assertEquals(Files.readString(originalPath), Files.readString(filePath2));
         assertEquals(Files.readString(originalPath2), Files.readString(filePath));

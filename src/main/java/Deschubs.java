@@ -142,10 +142,11 @@ public class Deschubs {
         // check if the file that is soon to be expanded into already exists
         File file = new File(filename.substring(0, filename.length() - 3));
         System.out.println(filename.substring(0, filename.length() - 3));
-        if (file.exists()) {
-            System.out.println("File " + filename.substring(0, filename.length() - 3) + " already exists.");
-            throw new IOException("File already exists.");
-        }
+        // if (file.exists()) {
+        // System.out.println("File " + filename.substring(0, filename.length() - 3) + "
+        // already exists.");
+        // throw new IOException("File already exists.");
+        // }
         try {
             System.out.println("New file being created");
             // create input stream for reading compressed file
